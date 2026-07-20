@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.0.21"
-compose-plugin = "1.7.0"
+compose-plugin = "1.11.1"
 
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
