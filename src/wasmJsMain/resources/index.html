@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compose App</title>
+    <title>My First Compose Wasm App</title>
+    <!-- cmpApp.js يتولد تلقائياً أثناء التجميع -->
+    <script type="application/javascript" src="cmpApp.js"></script>
     <style>
         html, body {
             width: 100%;
             height: 100%;
             margin: 0;
             padding: 0;
+            background-color: white;
             overflow: hidden;
         }
+
         #ComposeTarget {
             width: 100%;
             height: 100%;
-            display: block;
         }
     </style>
-    <script type="application/javascript" src="skiko.js"></script>
-    <script type="application/javascript" src="cmpApp.js"></script>
 </head>
 <body>
-    <canvas id="ComposeTarget"></canvas>
+    <div id="ComposeTarget"></div>
 </body>
 </html>
