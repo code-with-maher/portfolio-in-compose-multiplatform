@@ -13,13 +13,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App() {
-    MaterialTheme {
 
-        var isPlaying by remember { mutableStateOf(false) }
-        var currentParagraph by remember { mutableStateOf(0) }
-        var page by remember { mutableStateOf(1) }
+    var isPlaying by remember { mutableStateOf(false) }
+    var currentParagraph by remember { mutableStateOf(0) }
+    var page by remember { mutableStateOf(1) }
+
+    MaterialTheme {
 
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -30,7 +32,6 @@ fun App() {
                 modifier = Modifier.fillMaxSize()
             ) {
 
-                // الشريط العلوي
                 TopAppBar(
                     title = {
                         Text(
@@ -57,51 +58,53 @@ fun App() {
                 )
 
 
-                // محتوى الكتاب
                 LazyColumn(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth(),
+
                     contentPadding = PaddingValues(20.dp),
-                    verticalArrangement = Arrangement.spacedBy(18.dp)
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
 
                     val paragraphs = listOf(
-                        "في بداية هذا العصر ظهرت تقنيات جديدة غيرت طريقة تعامل الإنسان مع المعرفة. أصبح الحاسوب قادراً على فهم النصوص وتحليل البيانات بطريقة لم تكن ممكنة سابقاً.",
 
-                        "الذكاء الاصطناعي ليس مجرد آلة تجيب عن الأسئلة، بل هو مجموعة من الخوارزميات التي تتعلم من المعلومات وتحاول إيجاد أنماط تساعد البشر في حل المشكلات.",
+                        "في عالم يتغير بسرعة كبيرة أصبحت التقنية جزءاً أساسياً من حياة الإنسان. تساعدنا الأنظمة الذكية على تحليل المعلومات واكتشاف حلول جديدة.",
 
-                        "مع تطور التقنية أصبح بإمكان التطبيقات قراءة الكتب وتحويل النصوص إلى أصوات وإنشاء تجارب تفاعلية تجعل المعرفة أقرب وأسهل للجميع.",
+                        "الذكاء الاصطناعي يمثل مرحلة جديدة من تطور البرمجيات، حيث تستطيع البرامج التعلم من البيانات والتفاعل مع المستخدم بطرق أكثر طبيعية.",
 
-                        "المستقبل سيشهد تعاوناً أكبر بين الإنسان والآلة، حيث يستخدم الإنسان الإبداع بينما تساعده الأنظمة الذكية في الحساب والتحليل."
+                        "تطبيقات القراءة الحديثة يمكن أن تجمع بين النص والصوت والتحليل الذكي لتقديم تجربة مختلفة تجعل المعرفة أكثر سهولة ومتعة.",
+
+                        "المستقبل لن يكون صراعاً بين الإنسان والآلة، بل تعاوناً يساعد فيه كل طرف الآخر للوصول إلى نتائج أفضل."
                     )
 
 
                     items(paragraphs.size) { index ->
 
-                        val selected = index == currentParagraph
+                        val highlighted = currentParagraph == index
 
                         Text(
                             text = paragraphs[index],
-                            fontSize = 19.sp,
-                            lineHeight = 34.sp,
+                            fontSize = 18.sp,
+                            lineHeight = 32.sp,
                             textAlign = TextAlign.Justify,
+
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .background(
-                                    if (selected)
+                                    if (highlighted)
                                         MaterialTheme.colorScheme.primaryContainer
                                     else
                                         MaterialTheme.colorScheme.surface,
+
                                     RoundedCornerShape(12.dp)
                                 )
-                                .padding(14.dp)
+                                .padding(16.dp)
                         )
                     }
                 }
 
 
-                // شريط التحكم السفلي
                 Surface(
                     tonalElevation = 8.dp,
                     shadowElevation = 8.dp
@@ -111,14 +114,17 @@ fun App() {
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(12.dp),
+
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
 
                         Row(
                             modifier = Modifier.fillMaxWidth(),
+
                             horizontalArrangement = Arrangement.SpaceEvenly,
                             verticalAlignment = Alignment.CenterVertically
                         ) {
+
 
                             IconButton(
                                 onClick = {
@@ -134,9 +140,10 @@ fun App() {
 
 
                             IconButton(onClick = {}) {
+
                                 Icon(
                                     Icons.Default.Replay10,
-                                    contentDescription = "رجوع عشر ثواني"
+                                    contentDescription = "رجوع"
                                 )
                             }
 
@@ -145,6 +152,7 @@ fun App() {
                                 onClick = {
                                     isPlaying = !isPlaying
                                 },
+
                                 modifier = Modifier.size(60.dp)
                             ) {
 
@@ -153,24 +161,28 @@ fun App() {
                                         Icons.Default.Pause
                                     else
                                         Icons.Default.PlayArrow,
+
                                     contentDescription = "تشغيل"
                                 )
                             }
 
 
                             IconButton(onClick = {}) {
+
                                 Icon(
                                     Icons.Default.Forward10,
-                                    contentDescription = "تقديم عشر ثواني"
+                                    contentDescription = "تقديم"
                                 )
                             }
 
 
                             IconButton(
                                 onClick = {
-                                    currentParagraph++
+                                    if (currentParagraph < 3)
+                                        currentParagraph++
                                 }
                             ) {
+
                                 Icon(
                                     Icons.Default.SkipNext,
                                     contentDescription = "التالي"
