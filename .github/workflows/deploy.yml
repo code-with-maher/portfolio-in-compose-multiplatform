@@ -33,7 +33,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Build Wasm Distribution
-        run: ./gradlew wasmJsBrowserDistribution
+        run: gradle wasmJsBrowserDistribution
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
