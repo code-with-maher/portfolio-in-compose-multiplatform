@@ -4,8 +4,16 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      actions-all:
+        patterns:
+          - "*"
 
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      gradle-all:
+        patterns:
+          - "*"
