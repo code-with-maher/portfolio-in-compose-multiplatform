@@ -1,9 +1,14 @@
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -33,14 +38,23 @@ fun main() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = "تهانينا! لقد أنشأت أول مشروع Compose Multiplatform ناجح على الويب 🚀",
+                        text = "Compose Multiplatform Wasm Test 🚀",
                         style = MaterialTheme.typography.headlineSmall
                     )
 
                     Spacer(modifier = Modifier.height(24.dp))
 
                     Button(onClick = { counter++ }) {
-                        Text(text = "تم الضغط: $counter مرة")
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Add,
+                                contentDescription = "Add Icon"
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(text = "Clicked $counter times")
+                        }
                     }
                 }
             }
