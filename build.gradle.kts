@@ -9,6 +9,7 @@ plugins {
 kotlin {
     @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     wasmJs {
+        moduleName = "cmpApp"
         browser {
             commonWebpackConfig {
                 outputFileName = "cmpApp.js"
@@ -26,5 +27,12 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
         }
+    }
+}
+
+// تحسينات أمان الأداء وضغط حجم ملف الـ Wasm لأقصى حد في بناء Production
+tasks.withType<org.jetbrains.kotlin.gradle.targets.js.ir.KotlinJsIrLink>().configureEach {
+    compilerOptions {
+        freeCompilerArgs.add("-Xwasm-enable-array-range-checks=false")
     }
 }
