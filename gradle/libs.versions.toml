@@ -2,6 +2,9 @@
 kotlin = "2.4.10"
 compose-plugin = "1.11.1"
 
+[libraries]
+# يمكنك إضافة أي مكتبات خارجية هنا مستقبلاً عند الحاجة
+
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
