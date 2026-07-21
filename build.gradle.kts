@@ -29,9 +29,10 @@ kotlin {
     }
 }
 
-// تحسينات أمان الأداء وضغط حجم ملف الـ Wasm لأقصى حد في بناء Production
+// أقصى خيارات ضغط وتسريع لمترجم Wasm في بيئة Production
 tasks.withType<org.jetbrains.kotlin.gradle.targets.js.ir.KotlinJsIrLink>().configureEach {
     compilerOptions {
         freeCompilerArgs.add("-Xwasm-enable-array-range-checks=false")
+        freeCompilerArgs.add("-Xwasm-enable-asserts=false")
     }
 }
