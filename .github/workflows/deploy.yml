@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -31,23 +31,6 @@ jobs:
 
       - name: Setup Gradle and Develocity
         uses: gradle/actions/setup-gradle@v6
-
-      # إنشاء الـ Wrapper بإصدار 9.6.1 المكتمل وعمل Commit & Push مع [skip ci]
-      - name: Generate and Push Gradle Wrapper
-        run: |
-          if [ ! -f ./gradlew ]; then
-            echo "Gradle wrapper not found. Generating Wrapper for 9.6.1..."
-            gradle wrapper --gradle-version 9.6.1 --distribution-type all
-            
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            
-            git add gradlew gradlew.bat gradle/wrapper/
-            git commit -m "chore: add Gradle wrapper files [skip ci]"
-            git push
-          else
-            echo "Gradle wrapper already exists."
-          fi
 
       - name: Build Wasm Distribution
         run: ./gradlew wasmJsBrowserDistribution --build-cache
