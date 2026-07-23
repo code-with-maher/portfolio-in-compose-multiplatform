@@ -11,8 +11,10 @@ kotlin {
     wasmJs {
         compilerOptions {
             sourceMap = false
-            freeCompilerArgs.add("-Xwasm-enable-array-range-checks=false")
-            freeCompilerArgs.add("-Xwasm-enable-asserts=false")
+            freeCompilerArgs.addAll(
+                "-Xwasm-enable-array-range-checks=false",
+                "-Xwasm-enable-asserts=false"
+            )
         }
 
         browser {
@@ -46,6 +48,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.targets.js.binaryen.BinaryenExec>().c
         "--inline-functions-with-loops",
         "--traps-never-happen",
         "--fast-math",
+        "--strip-debug",
+        "--strip-dwarf",
+        "--strip-producers",
         "-O3",
         "-Oz"
     )
