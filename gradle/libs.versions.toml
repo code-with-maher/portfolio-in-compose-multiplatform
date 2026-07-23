@@ -1,16 +1,11 @@
 [versions]
 kotlin = "2.4.10"
 compose-plugin = "1.11.1"
-compose-libs = "1.9.0"
+compose-material3 = "1.9.0"
 
 [libraries]
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-libs" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-libs" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-libs" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-libs" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-libs" }
-
-[plugins]
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
-composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-plugin" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-plugin" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-plugin" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-plugin" }
