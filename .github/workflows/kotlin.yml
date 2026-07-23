@@ -1,22 +1,27 @@
-name: Setup and Commit Kotlin Toolchain Wrapper
+name: Deploy Compose Web to GitHub Pages (Kotlin Toolchain)
 
 on:
-  workflow_dispatch:
   push:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  generate-and-commit-wrapper:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up JDK 25
         uses: actions/setup-java@v5
@@ -24,77 +29,17 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
 
-      - name: Install Kotlin Toolchain & Generate Wrapper Dynamically
-        run: |
-          # 1. إنشاء سكريبت البايثون مؤقتاً داخل السيرفر
-          cat << 'EOF' > generate_wrapper.py
-          import os, pty, subprocess, sys
+      - name: Make ./kotlin Executable
+        run: chmod +x ./kotlin
 
-          def run_kotlin_init():
-              sdkman_bin = os.path.expanduser("~/.sdkman/candidates/kotlintoolchain/current/bin")
-              env = os.environ.copy()
-              if os.path.exists(sdkman_bin):
-                  env["PATH"] = f"{sdkman_bin}:{env.get('PATH', '')}"
+      - name: Build Wasm Distribution
+        run: ./kotlin build
 
-              master, slave = pty.openpty()
-              try:
-                  proc = subprocess.Popen(
-                      ["kotlin", "init"],
-                      stdin=slave, stdout=slave, stderr=slave,
-                      env=env, close_fds=True
-                  )
-                  os.close(slave)
-                  try:
-                      os.write(master, b"\n")
-                  except OSError:
-                      pass
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/tasks/buildWasmJs/dist
 
-                  while True:
-                      try:
-                          data = os.read(master, 1024)
-                          if not data: break
-                          sys.stdout.buffer.write(data)
-                          sys.stdout.flush()
-                      except OSError:
-                          break
-
-                  proc.wait()
-                  return proc.returncode
-              finally:
-                  try:
-                      os.close(master)
-                  except OSError:
-                      pass
-
-          if __name__ == "__main__":
-              print("[Dynamic Runner] Executing kotlin init via PTY...")
-              sys.exit(run_kotlin_init())
-          EOF
-
-          # 2. تثبيت SDKMAN والـ Toolchain
-          curl -s "https://get.sdkman.io" | bash
-          source "$HOME/.sdkman/bin/sdkman-init.sh"
-          sdk install kotlintoolchain 0.11.1
-
-          # 3. تشغيل السكريبت المؤقت لتوليد الرابر
-          python3 generate_wrapper.py
-
-          # 4. تنظيف البيئة بحذف سكريبت البايثون فوراً كي لا يُرفع للمستودع
-          rm -f generate_wrapper.py
-
-          # 5. إعطاء صلاحيات التنفيذ للرابر المولد
-          chmod +x ./kotlin || true
-
-      - name: Commit and Push Wrapper Files
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add kotlin kotlin.bat .amper/ amper.settings.json 2>/dev/null || git add .
-
-          if git diff --staged --quiet; then
-            echo "لا توجد تغييرات جديدة لتسجيلها."
-          else
-            git commit -m "build: initialize Kotlin Toolchain wrapper"
-            git push
-          fi
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
