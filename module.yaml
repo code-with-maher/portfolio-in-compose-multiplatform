@@ -1,17 +1,17 @@
-# 1. تحديد نوع المنتج لمنصة الويب Wasm
-product: wasmJs/app
+# 1. تحديد نوع المنتج لتطبيق Kotlin/Wasm للويب
+product: wasm-js/app
 
-# 2. إعدادات المترجم وتفعيل Compose Multiplatform
+# 2. تفعيل Compose Multiplatform
 settings:
   compose:
     enabled: true
-    # اختياري: إذا أردت استخدام Compose Resources لإدارة الصور والملفات
+
+    # إعداد Compose Resources
     resources:
       packageName: "com.example.portfolio.resources"
 
-# 3. إعلان التبعيات والمكتبات
+# 3. تبعيات Compose Multiplatform
 dependencies:
-  # سحب مكتبات Compose المدمجة في Amper تلقائياً
   - $compose.runtime
   - $compose.foundation
   - $compose.material3
