@@ -9,6 +9,12 @@ plugins {
 kotlin {
     @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     wasmJs {
+        compilerOptions {
+            sourceMap = false
+            freeCompilerArgs.add("-Xwasm-enable-array-range-checks=false")
+            freeCompilerArgs.add("-Xwasm-enable-asserts=false")
+        }
+
         browser {
             commonWebpackConfig {
                 outputFileName = "cmpApp.js"
@@ -29,10 +35,18 @@ kotlin {
     }
 }
 
-// أقصى خيارات ضغط وتسريع لمترجم Wasm في بيئة Production
-tasks.withType<org.jetbrains.kotlin.gradle.targets.js.ir.KotlinJsIrLink>().configureEach {
-    compilerOptions {
-        freeCompilerArgs.add("-Xwasm-enable-array-range-checks=false")
-        freeCompilerArgs.add("-Xwasm-enable-asserts=false")
-    }
+tasks.withType<org.jetbrains.kotlin.gradle.targets.js.binaryen.BinaryenExec>().configureEach {
+    binaryenArgs = mutableListOf(
+        "--enable-gc",
+        "--enable-reference-types",
+        "--enable-exception-handling",
+        "--enable-bulk-memory",
+        "--enable-nontrapping-float-to-int",
+        "--closed-world",
+        "--inline-functions-with-loops",
+        "--traps-never-happen",
+        "--fast-math",
+        "-O3",
+        "-Oz"
+    )
 }
