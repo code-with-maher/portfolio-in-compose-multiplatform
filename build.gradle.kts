@@ -21,28 +21,6 @@ kotlin {
             }
         }
         binaries.executable()
-
-        applyBinaryen {
-            binaryenArgs = mutableListOf(
-                "--enable-gc",
-                "--enable-reference-types",
-                "--enable-exception-handling",
-                "--enable-bulk-memory",
-                "--enable-nontrapping-float-to-int",
-                "--closed-world",
-                "--inline-functions-with-loops",
-                "--traps-never-happen",
-                "--fast-math",
-                "--strip-debug",
-                "--strip-dwarf",
-                "--strip-producers",
-                "-O3",
-                "-O3",
-                "--gufa",
-                "-O3",
-                "-Oz"
-            )
-        }
     }
 
     sourceSets {
