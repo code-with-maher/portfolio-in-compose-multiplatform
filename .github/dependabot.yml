@@ -1,4 +1,10 @@
 version: 2
+
+registries:
+  jetbrains-compose:
+    type: maven-repository
+    url: https://maven.pkg.jetbrains.space/public/p/compose/dev
+
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -11,6 +17,8 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/"
+    registries:
+      - jetbrains-compose
     schedule:
       interval: "daily"
     groups:
