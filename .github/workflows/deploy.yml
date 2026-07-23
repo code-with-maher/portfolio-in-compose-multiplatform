@@ -35,12 +35,6 @@ jobs:
       - name: Build Wasm Distribution
         run: ./gradlew clean wasmJsBrowserDistribution --no-daemon
 
-      - name: Pre-compress WebAssembly and Assets (Gzip & Brotli)
-        run: |
-          cd build/dist/wasmJs/productionExecutable
-          find . -type f \( -name "*.wasm" -o -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec gzip -9 -k {} +
-          find . -type f \( -name "*.wasm" -o -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec brotli --best -k {} +
-
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v5
         with:
