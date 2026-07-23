@@ -2,6 +2,13 @@
 kotlin = "2.4.10"
 compose-plugin = "1.11.1"
 
+[libraries]
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources" }
+
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
