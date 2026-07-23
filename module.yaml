@@ -1,7 +1,5 @@
 # module.yaml
-product:
-  type: app
-  platforms: [wasmJs]
+product: wasm-js/app
 
 settings:
   compose: enabled
