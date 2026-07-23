@@ -1,5 +1,19 @@
-# module.yaml
-product: wasm-js/app
+# 1. تحديد نوع المنتج لمنصة الويب Wasm
+product: wasmJs/app
 
+# 2. إعدادات المترجم وتفعيل Compose Multiplatform
 settings:
-  compose: enabled
+  compose:
+    enabled: true
+    # اختياري: إذا أردت استخدام Compose Resources لإدارة الصور والملفات
+    resources:
+      packageName: "com.example.portfolio.resources"
+
+# 3. إعلان التبعيات والمكتبات
+dependencies:
+  # سحب مكتبات Compose المدمجة في Amper تلقائياً
+  - $compose.runtime
+  - $compose.foundation
+  - $compose.material3
+  - $compose.ui
+  - $compose.components.resources
