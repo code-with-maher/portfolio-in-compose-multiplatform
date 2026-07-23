@@ -26,11 +26,11 @@ kotlin {
 
     sourceSets {
         wasmJsMain.dependencies {
-            implementation(org.jetbrains.compose.runtime)
-            implementation(org.jetbrains.compose.foundation)
-            implementation(org.jetbrains.compose.material3)
-            implementation(org.jetbrains.compose.ui)
-            implementation(org.jetbrains.compose.components.resources)
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
         }
     }
 }
