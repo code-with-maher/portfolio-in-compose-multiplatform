@@ -1,0 +1,29 @@
+name: Kotlin CLI Help Inspection
+
+on:
+  workflow_dispatch:
+
+env:
+  KOTLIN_CLI_NO_WELCOME_BANNER: "1"   # يمنع طباعة شعار الترحيب (ASCII/hex) في السجلات
+
+jobs:
+  inspect-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Make kotlin wrapper executable
+        run: chmod +x ./kotlin
+
+      - name: Cache Kotlin CLI distribution
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/JetBrains/Kotlin/cli
+          key: kotlin-cli-${{ hashFiles('kotlin') }}
+
+      - name: Show 'kotlin build' options
+        run: ./kotlin build --help
+
+      - name: Show 'kotlin package' options
+        run: ./kotlin package --help
