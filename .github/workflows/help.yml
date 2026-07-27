@@ -17,7 +17,7 @@ jobs:
         run: chmod +x ./kotlin
 
       - name: Cache Kotlin CLI distribution
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/JetBrains/Kotlin/cli
           key: kotlin-cli-${{ hashFiles('kotlin') }}
