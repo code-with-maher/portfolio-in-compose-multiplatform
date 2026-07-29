@@ -1,0 +1,15 @@
+{
+    "codeVersion": "0.12.0-dev-4184",
+    "inputValues": {},
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compose-compiler-plugin-embeddable/2.3.21/kotlin-compose-compiler-plugin-embeddable-2.3.21.jar"
+    ],
+    "outputFilesState": {
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compose-compiler-plugin-embeddable/2.3.21/kotlin-compose-compiler-plugin-embeddable-2.3.21.jar": "size 941028 mtime 2026-07-29T12:14:19.958392746Z mode 420 owner runner group runner"
+    },
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}

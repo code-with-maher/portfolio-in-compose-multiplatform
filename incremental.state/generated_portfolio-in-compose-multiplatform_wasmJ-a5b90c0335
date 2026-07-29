@@ -1,0 +1,13 @@
+{
+    "codeVersion": "0.12.0-dev-4184",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/preparedComposeResources"
+    },
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}
