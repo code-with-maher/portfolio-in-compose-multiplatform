@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  KOTLIN_CLI_NO_WELCOME_BANNER: "1"   # يمنع طباعة شعار الترحيب في السجلات
+  KOTLIN_CLI_NO_WELCOME_BANNER: "1"
 
 jobs:
   inspect-cli:
@@ -17,6 +17,4 @@ jobs:
         run: chmod +x ./kotlin
 
       - name: Show full Kotlin CLI help
-        run: |
-          ./kotlin --help || true
-          ./kotlin help || true
+        run: ./kotlin --help
