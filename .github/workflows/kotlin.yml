@@ -1,6 +1,8 @@
 name: Build and Deploy Wasm to GitHub Pages
 
 on:
+  push:
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -25,12 +27,12 @@ jobs:
           path: |
             ~/.cache/JetBrains/Kotlin
             build/
-          key: kotlin-wasm-build-${{ hashFiles('kotlin', 'project.yaml', 'module.yaml') }}
+          key: kotlin-wasm-build-${{ hashFiles('kotlin', 'module.yaml') }}
           restore-keys: |
             kotlin-wasm-build-
 
-      - name: Build Wasm Release
-        run: ./kotlin build --build-type release
+      - name: Build Wasm
+        run: ./kotlin build release
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
