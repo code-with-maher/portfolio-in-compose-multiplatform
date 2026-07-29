@@ -21,18 +21,14 @@ jobs:
       - name: Make kotlin wrapper executable
         run: chmod +x ./kotlin
 
-      - name: Cache Kotlin Toolchain and Build Outputs
-        uses: actions/cache@v4
+      - name: Cache Kotlin CLI
+        uses: actions/cache@v6
         with:
-          path: |
-            ~/.cache/JetBrains/Kotlin
-            build/
-          key: kotlin-wasm-build-${{ hashFiles('kotlin', 'module.yaml') }}
-          restore-keys: |
-            kotlin-wasm-build-
+          path: ~/.cache/JetBrains/Kotlin/cli
+          key: kotlin-cli-${{ hashFiles('kotlin') }}
 
       - name: Build Wasm
-        run: ./kotlin build release
+        run: ./kotlin build -v release
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
