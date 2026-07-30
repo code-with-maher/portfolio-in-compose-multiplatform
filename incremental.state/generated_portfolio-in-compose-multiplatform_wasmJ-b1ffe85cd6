@@ -1,0 +1,17 @@
+{
+    "codeVersion": "0.12.0-dev-4189",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/src/compose/resources/accessors",
+        "makeAccessorsPublic": "false",
+        "packageName": "\"com.example.portfolio.resources\"",
+        "packagingDir": "\"composeResources/com.example.portfolio.resources/\"",
+        "resClassName": "\"Res\""
+    },
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}
