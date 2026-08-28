@@ -1,0 +1,19 @@
+Kotlin Toolchain version 0.13.0-dev-4320 (752e561, 2026-08-26)
+running on Linux 6.17.0-1022-azure jvm arch amd64
+
+00:10.892 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs Downloader                Downloading https://github.com/pnpm/pnpm/releases/download/v11.9.0/pnpm-linux-x64.tar.gz to /home/runner/.cache/JetBrains/Kotlin/download.cache/d30df19002-pnpm-linux-x64.tar.gz
+00:11.419 INFO  :portfolio-in-compose-multiplatform:compileWasmJs Downloader                Downloading https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz to /home/runner/.cache/JetBrains/Kotlin/download.cache/5cadb5bf88-OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz
+00:14.393 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener Progress: resolved 1, reused 0, downloaded 0, added 0
+00:14.415 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener Packages: +1
+00:14.415 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener +
+00:14.435 INFO  :portfolio-in-compose-multiplatform:compileWasmJs Slf4jExtensionsKt         Compiling module 'portfolio-in-compose-multiplatform' for platform 'wasmJs'...
+00:14.523 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener Progress: resolved 1, reused 0, downloaded 1, added 1, done
+00:14.546 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener 
+00:14.546 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener dependencies:
+00:14.546 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener + @js-joda/core 3.2.0 (6.1.0 is available)
+00:14.547 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener 
+00:14.556 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs LoggingProcessOutputListener Done in 336ms using pnpm v11.9.0
+00:14.577 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs NpmInstallTask            pnpm install completed successfully
+00:17.788 INFO  :portfolio-in-compose-multiplatform:compileWasmJs Slf4jExtensionsKt         Compiling module 'portfolio-in-compose-multiplatform' for platform 'wasmJs'...
+00:22.782 INFO  :portfolio-in-compose-multiplatform:compileWasmJs MessagesKt                Compilation successful for 'portfolio-in-compose-multiplatform' [wasmJs]
+00:22.792 INFO  :portfolio-in-compose-multiplatform:linkWasmJsRelease Slf4jExtensionsKt         Linking wasmJs executable for module 'portfolio-in-compose-multiplatform'...

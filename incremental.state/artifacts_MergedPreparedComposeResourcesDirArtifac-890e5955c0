@@ -1,0 +1,14 @@
+{
+    "codeVersion": "0.13.0-dev-4320",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/artifacts/MergedPreparedComposeResourcesDirArtifact/portfolio-in-compose-multiplatformwasmJs",
+        "packagingDir": "\"composeResources/com.example.portfolio.resources/\""
+    },
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}
