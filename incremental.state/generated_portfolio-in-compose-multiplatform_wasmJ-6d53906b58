@@ -1,0 +1,17 @@
+{
+    "codeVersion": "0.15.0-dev-4643",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJsTest/preparedComposeResources"
+    },
+    "inputFiles": [
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/testComposeResources@wasmJs"
+    ],
+    "inputFilesState": {
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/testComposeResources@wasmJs": "MISSING"
+    },
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}

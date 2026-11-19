@@ -1,0 +1,22 @@
+{
+    "codeVersion": "0.15.0-dev-4643",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/artifacts/MergedPreparedComposeResourcesDirArtifact/portfolio-in-compose-multiplatformwasmJs",
+        "packagingDir": "\"composeResources/com.example.portfolio.resources/\""
+    },
+    "inputFiles": [
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/web/preparedComposeResources",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/common/preparedComposeResources",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/preparedComposeResources"
+    ],
+    "inputFilesState": {
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/common/preparedComposeResources": "MISSING",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/preparedComposeResources": "MISSING",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/web/preparedComposeResources": "MISSING"
+    },
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}
