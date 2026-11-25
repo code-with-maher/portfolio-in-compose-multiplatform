@@ -1,0 +1,29 @@
+{
+    "codeVersion": "0.15.0-dev-4643",
+    "inputValues": {},
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.4.20/kotlin-compiler-embeddable-2.4.20.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.4.20/kotlin-build-tools-api-2.4.20.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.4.20/kotlin-stdlib-2.4.20.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-script-runtime/2.4.20/kotlin-script-runtime-2.4.20.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.4.20/kotlin-daemon-embeddable-2.4.20.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar"
+    ],
+    "outputFilesState": {
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar": "size 29371 mtime 2026-11-19T08:29:34.675968671Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.4.20/kotlin-build-tools-api-2.4.20.jar": "size 468126 mtime 2026-11-19T08:29:34.684968653Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.4.20/kotlin-compiler-embeddable-2.4.20.jar": "size 58593245 mtime 2026-11-19T08:29:35.750966621Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.4.20/kotlin-daemon-embeddable-2.4.20.jar": "size 393409 mtime 2026-11-19T08:29:34.723968579Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar": "size 3038560 mtime 2026-11-19T08:29:34.81962849Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-script-runtime/2.4.20/kotlin-script-runtime-2.4.20.jar": "size 46531 mtime 2026-11-19T08:29:34.690968642Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.4.20/kotlin-stdlib-2.4.20.jar": "size 1853314 mtime 2026-11-19T08:29:34.591968831Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar": "size 1548360 mtime 2026-11-19T08:29:34.589968835Z mode 420 owner runner group runner"
+    },
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}

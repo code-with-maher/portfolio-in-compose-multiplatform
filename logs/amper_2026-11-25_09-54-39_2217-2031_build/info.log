@@ -1,0 +1,10 @@
+Kotlin Toolchain version 0.15.0-dev-4654 (7348e16, 2026-11-25)
+running on Linux 7.0.0-1020-azure jvm arch amd64
+
+00:05.065 INFO  :portfolio-in-compose-multiplatform:compileWasmJs Slf4jExtensionsKt         Compiling module 'portfolio-in-compose-multiplatform' for platform 'wasmJs'...
+00:05.072 INFO  :portfolio-in-compose-multiplatform:compileWasmJs Slf4jExtensionsKt         Compiling module 'portfolio-in-compose-multiplatform' for platform 'wasmJs'...
+00:06.679 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJs Slf4jExtensionsKt         pnpm install completed successfully
+00:06.682 INFO  :portfolio-in-compose-multiplatform:npmInstallWasmJsTest Slf4jExtensionsKt         pnpm install completed successfully
+00:10.905 INFO  :portfolio-in-compose-multiplatform:compileWasmJs MessagesKt                Compilation successful for 'portfolio-in-compose-multiplatform' [wasmJs]
+00:10.922 INFO  :portfolio-in-compose-multiplatform:linkWasmJsRelease Slf4jExtensionsKt         Linking wasmJs executable for module 'portfolio-in-compose-multiplatform'...
+00:45.701 INFO  :portfolio-in-compose-multiplatform:linkWasmJsRelease ProblemReportingCompilerOutputListener KLIB loader: Not a Kotlin library, or a library with invalid format: /home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compose-compiler-plugin-embeddable/2.5.0-RC/kotlin-compose-compiler-plugin-embeddable-2.5.0-RC.jar

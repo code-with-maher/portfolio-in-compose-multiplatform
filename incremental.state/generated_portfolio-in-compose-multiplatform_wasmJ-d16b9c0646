@@ -1,0 +1,26 @@
+{
+    "codeVersion": "0.15.0-dev-4654",
+    "inputValues": {
+        "%outputs%": "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/src/compose/resources/collectors",
+        "makeAccessorsPublic": "false",
+        "packageName": "\"com.example.portfolio.resources\"",
+        "resClassName": "\"Res\"",
+        "shouldGenerateCode": "false",
+        "useActualModifier": "true"
+    },
+    "inputFiles": [
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/web/src/compose/resources/accessors",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/common/src/compose/resources/accessors",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/src/compose/resources/accessors"
+    ],
+    "inputFilesState": {
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/common/src/compose/resources/accessors": "MISSING",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/wasmJs/src/compose/resources/accessors": "MISSING",
+        "/home/runner/work/portfolio-in-compose-multiplatform/portfolio-in-compose-multiplatform/build/generated/portfolio-in-compose-multiplatform/web/src/compose/resources/accessors": "MISSING"
+    },
+    "outputValues": {},
+    "outputFiles": [],
+    "outputFilesState": {},
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}

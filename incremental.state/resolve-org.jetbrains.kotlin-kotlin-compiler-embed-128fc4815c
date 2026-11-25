@@ -1,0 +1,27 @@
+{
+    "codeVersion": "0.15.0-dev-4654",
+    "inputValues": {},
+    "inputFiles": [],
+    "inputFilesState": {},
+    "outputValues": {},
+    "outputFiles": [
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.5.0-RC/kotlin-compiler-embeddable-2.5.0-RC.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.5.0-RC/kotlin-build-tools-api-2.5.0-RC.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.5.0-RC/kotlin-stdlib-2.5.0-RC.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.5.0-RC/kotlin-daemon-embeddable-2.5.0-RC.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar"
+    ],
+    "outputFilesState": {
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar": "size 29371 mtime 2026-11-19T08:29:34.675968671Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-build-tools-api/2.5.0-RC/kotlin-build-tools-api-2.5.0-RC.jar": "size 575839 mtime 2026-11-25T09:54:43.171715153Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.5.0-RC/kotlin-compiler-embeddable-2.5.0-RC.jar": "size 59195768 mtime 2026-11-25T09:54:43.386743707Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.5.0-RC/kotlin-daemon-embeddable-2.5.0-RC.jar": "size 372679 mtime 2026-11-25T09:54:43.010686436Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar": "size 3038560 mtime 2026-11-19T08:29:34.81962849Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlin/kotlin-stdlib/2.5.0-RC/kotlin-stdlib-2.5.0-RC.jar": "size 1906669 mtime 2026-11-25T09:54:42.790647196Z mode 420 owner runner group runner",
+        "/home/runner/.cache/JetBrains/Kotlin/.m2.cache/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar": "size 1548360 mtime 2026-11-19T08:29:34.589968835Z mode 420 owner runner group runner"
+    },
+    "excludedOutputFiles": [],
+    "dynamicInputs": {}
+}
